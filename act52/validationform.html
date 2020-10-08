@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Validation form</title>
+        <link rel="stylesheet" type="text/css" href="https://jcamachoo.github.io/Camacho_Webdev_Finals/act52/valstyle.css">
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <script type='text/javascript' src='https://jcamachoo.github.io/Camacho_Webdev_Finals/act52/scripts.js'></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        
+	</head>
+	<body>
+    <div id='header'>
+        <h1>STUDENT REGISTRATION FORM</h1>
+    </div>
+        
+        <div id='main'>
+            <div id='el'></div>
+            <div id="success_box">
+      All of the  fields were successfully validated!
+    </div>
+                <form  name="myForm"  
+           class='myForm'>
+                <ul>
+                    
+                   <li>
+                       <label>First name:*</label> 
+                       <input type="text" name="firstname" placeholder='Enter your first name'  > <br/>
+                    </li>
+                    <li>
+                        <label>Last name:*</label>
+                        <input type='text' name='lastname'placeholder='Enter your last name'> <br/>
+                    </li>
+                  <li><label>Gender:*</label><br><br>
+<input type="radio" value="Male" name="gender" checked > Male   
+<input type="radio" value="Female" name="gender"> Female   
+                  </li>
+                  <li>
+                    <label>   
+  Course:
+</label>   
+  
+<select>  
+<option value="Course">Select Course</option>  
+<option value="BSA">BSA</option>  
+<option value="BSAT">BSAT</option>  
+<option value="BSBA">BSBA</option>  
+<option value="BSIT">BSIT</option>
+<option value="BSIS">BSIS</option>
+<option value="BSHRM">BSHRM</option>  
+<option value="BSN">BSN</option>  
+                    </select> </li>
+                  <li>
+                    <label>Non-Academic Club</label>   
+  
+<select>  
+<option value="Course">Select Club</option>  
+<option value="Bibliophile">Bibliophile</option>  
+<option value="FACES">FACES</option>  
+<option value="Debate Socitey">Debate Society</option>  
+<option value="Media">Media</option>
+<option value="Rotaract">Rotaract</option>
+<option value="Peer Facilitator">Peer facilitator</option>    
+                    </select></li>
+                    <li>
+                        <label>Email:*</label>
+                        <input type='text' name='email' placeholder='Enter a valid email' > <br/>
+                    </li>
+                    <li>
+                        <label>Password:* </label>
+                        <input type='password' name='pwd1' placeholder='Enter your password'> <br/>
+                    </li>
+                    <li>
+                        <label>Confirm password:*</label>
+                        <input type='password' name='pwd2' placeholder='Re-type your password'> <br/>
+                    </li>
+                    <li>
+                        <label>Phone number:</label>
+                        <input type='number' name='phoneNumber' placeholder='Enter your phone number'><br/>
+                    </li>
+                    <li>
+                        <label>Address line:</label>
+                        <input type='address' name='address' placeholder='Enter your address'><br/>
+                    </li>
+                 
+ 
+                    <li>
+                        <label>City: </label> 
+                        <input type='city' name='city' placeholder='Enter your city'> <br/>
+                    </li>
+                    <li>
+                        <button class="submit" type="submit">Submit Form</button>
+                        
+                    </li>
+                    <li>
+                        
+                        <p class="required_notification">* Denotes Required Field</p>
+                        
+                    </li>
+                
+                    
+                
+                </ul>
+                </form>
+            </div>
+            
+        </div>
+        <script>
+            var validator = new FormValidator('myForm', [{
+    name: 'firstname',
+    display: 'First name',    
+    rules: 'required|min_length[3]|alpha'
+}, {
+    name: 'lastname',
+    display:'Last name',
+    rules: 'required|min_length[4]|alpha'
+},{
+    name: 'email',
+    display:'Email',
+    rules: 'required|valid_email'
+}, {
+    name: 'pwd1',
+    display:'Password',
+    rules: 'required|min_length[7]'
+}, {
+    name: 'pwd2',
+    display: 'Confirm password',
+    rules: 'required|matches[pwd1]|min_length[7]'
+},  {
+    name: 'phoneNumber',
+    rules: 'exact_length[10]|numeric'
+}], function(errors, event) {
+    if (errors.length > 0) {
+        var errorString = '';
+        
+        for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
+            errorString += errors[i].message + '<br />';
+        }
+        
+        document.getElementById('el').innerHTML = errorString;
+        document.getElementById('el').style.display = "inline-block";
+    }
+    else {
+        document.getElementById('success_box').style.display='inline-block';
+        
+    }
+}); 
+
+        </script>
+    </body>
+</html>

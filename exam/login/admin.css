@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+  background-color: black;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  background-color: black;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.text-center h1{
+color: white;
+}

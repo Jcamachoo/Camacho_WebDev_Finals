@@ -9,7 +9,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 	font-family: "Raleway";
 }
 .navbar{
-	background: black;
+	background: #1f2833;
   text-decoration: none;
 }
 .nav-link , .navbar-brand{
@@ -246,3 +246,4 @@ color: black;
 .admin h1{
   color: red;
 }
+

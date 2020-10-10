@@ -129,7 +129,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 	position: relative;	
 }
 .blog h1{
-	color:#F97300;
+	color: red;
 	margin: 2em;	
 }
 .blog .card{
@@ -145,45 +145,15 @@ html,h1,h2,h3,h4,h5,h6,a{
  }	
 }
 .blog .card-title{
-	color:#F97300;
+	color: red;
 	 
 }
 .blog .card-body{
 	padding: 1em;
 }
-.team{
-	margin: 4em 0;
-	position: relative;
-
-}
-.team h1{
-	color:#F97300;
-	margin: 2em;	
-}
 .team .item{
 	position: relative;
 	overflow: hidden;	
-}
-.team .des{
-	background: #F97300;
-	color: #fff;
-	text-align: center;
-	border-top-right-radius: 93%;
-	transition:.3s ease-in-out;
-	position: absolute;
-	width: 88%;
-	bottom: 24px;
-
-
-}
-.team .item:hover .des{
-	height: 100%;
-	background:#f973007d;
-    position: absolute;
-	width: 89%;
-	padding: 5em;
-	top: 0;
-	border-top-right-radius: 0;
 }
 .contact-form{
 	margin: 6em 0;
@@ -192,7 +162,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 .contact-form h1{
 	padding:2em 1px;
-	color: #F97300; 
+	color: red; 
 }
 .contact-form .right{
 	max-width: 600px;
@@ -266,4 +236,13 @@ color: black;
 .card-title{
 color: white;
 }
-
+.card-text{
+color: black;
+}
+.admin{
+  height: 100vh;
+  width: 100%;
+}
+.admin h1{
+  color: red;
+}

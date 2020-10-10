@@ -59,6 +59,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 }
 .description h1{
 	color: red ;
+  font-size: 70px;
 }
 .description p{
 	color: white;
@@ -83,11 +84,10 @@ html,h1,h2,h3,h4,h5,h6,a{
 .about img{
 	height: 80%;
     width: 80%;
-    border-radius: 50%
 }
 .about span{
 	display: block;
-	color: #888;
+	color: white;
 	position: absolute;
 	left: 115px;
 }
@@ -96,11 +96,11 @@ html,h1,h2,h3,h4,h5,h6,a{
 	border-left:4px solid #10828C;
 }
 .about .desc h3{
-	color: black;
+	color: white;
 }
 .about .desc p{
 	line-height:2;
-	color:#888;
+	color: white;
 }
 
 
@@ -251,3 +251,7 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.newsupdates{
+color: white;
+}
+
